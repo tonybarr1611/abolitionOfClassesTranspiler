@@ -1,0 +1,10 @@
+/protesta/ Funcion para sumar dos numeros enteros
+imperialismo asamblea sumar(a, b){
+    unidad resultado = 0
+    rebelion resultado = a + b
+    sentencia resultado
+}
+
+/protesta/ Llamada a la funcion sumar
+unidad suma_total = 0
+rebelion suma_total = comandar sumar(5, 10)
