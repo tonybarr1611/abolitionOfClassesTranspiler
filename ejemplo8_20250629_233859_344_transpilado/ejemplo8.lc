@@ -1,0 +1,12 @@
+/protesta/ funcion que une tres textos
+imperialismo asamblea unir_textos(texto1, texto2, texto3){
+    manifiesto resultado = ""
+    rebelion resultado = (texto1 + texto2) + texto3
+    sentencia resultado
+}
+/protesta/ llamada a la funcion unir_textos
+manifiesto texto1 = ""
+
+rebelion texto1 = comandar opinion("Ingrese el primer texto: ")
+
+comandar mostrar_mensaje(comandar unir_textos(texto1, ", Paz y ", "Justicia"))
