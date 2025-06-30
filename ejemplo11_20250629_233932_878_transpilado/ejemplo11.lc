@@ -1,0 +1,9 @@
+/protesta/ Funcion promedio de tres numeros flotantes
+asamblea promedio(var_a, var_b, var_c){
+    colectivo resultado = 1.1
+    rebelion resultado = ((var_a + var_b) + var_c) / 3.0
+    sentencia resultado
+}
+
+/protesta/ Llamada a la funcion promedio
+comandar mostrar_mensaje(comandar promedio(3.5, 4.0, 5.5))
