@@ -1,0 +1,13 @@
+/protesta/ Suma los dígitos de un número entero
+
+asamblea suma_digitos(numero){
+    unidad suma = 0
+    revolucion(numero > 0){
+        rebelion suma = suma + (numero % 10)
+        rebelion numero = numero // 10
+    }
+    sentencia suma
+}
+
+/protesta/ Llamada a la función suma_digitos
+comandar mostrar_mensaje(comandar suma_digitos(135))
