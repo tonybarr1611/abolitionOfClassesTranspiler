@@ -1,0 +1,13 @@
+/protesta/ verifica si un numero es mayor a otro
+comunidad asamblea es_mayor(numero1, numero2){
+    unidad mayor = 0
+    abolir_clases(numero1 > numero2){
+        rebelion mayor = 1
+    } en_igualdad {
+        rebelion mayor = 0
+    }
+    sentencia mayor
+}
+/protesta/ llamada a la funcion es_mayor
+unidad resultado_mayor = 0
+rebelion resultado_mayor = comandar es_mayor(5, 3)
