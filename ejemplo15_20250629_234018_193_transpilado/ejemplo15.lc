@@ -1,0 +1,9 @@
+/protesta/ Funcion para crear un mensaje completo
+comunidad asamblea crear_mensaje(nombre, saludo){
+    manifiesto mensaje = ""
+    rebelion mensaje = (saludo + " ") + nombre
+    sentencia mensaje
+}
+
+/protesta/ Llamada incorrecta a la funcion
+comandar mostrar_mensaje(comandar crear_mensaje("Companero", "Hola"))
