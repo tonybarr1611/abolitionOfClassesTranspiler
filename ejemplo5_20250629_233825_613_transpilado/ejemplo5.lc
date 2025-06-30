@@ -1,0 +1,11 @@
+asamblea reemplazar_si_igual(original, comparar, reemplazo){
+    comunidad manifiesto resultado = ""
+    abolir_clases(original == comparar){
+        rebelion resultado = reemplazo
+    }en_igualdad{
+        rebelion resultado = original
+    }
+    sentencia resultado
+}
+/protesta/ Uso de la funcion
+comandar reemplazar_si_igual("opresion", "opresion", "libertad") /protesta/ retorna "libertad"
