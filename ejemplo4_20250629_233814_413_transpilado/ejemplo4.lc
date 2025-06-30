@@ -1,0 +1,11 @@
+asamblea textos_iguales(texto1, texto2){
+    comunidad unidad resultado = 0
+    abolir_clases(texto1 == texto2){
+        rebelion resultado = 1 /protesta/ Verdadero, textos iguales
+    }en_igualdad{
+        rebelion resultado = 0 /protesta/ Falso, textos distintos
+    }
+    sentencia resultado    
+}
+/protesta/ Uso de la funcion
+comandar textos_iguales("Revolucion", "revolucion") /protesta/ Retorna 0
