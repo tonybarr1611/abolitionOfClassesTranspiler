@@ -1,0 +1,21 @@
+/protesta/ Suma todos los pares desde 1 hasta N
+
+comunidad asamblea suma_pares(n){
+    unidad suma = 0
+    comunidad unidad indice = 2
+    revolucion(indice <= n){
+        rebelion suma = suma + indice
+        rebelion indice = indice + 2
+    }
+    sentencia suma
+}
+
+/protesta/ Llamada a la función suma_pares
+unidad entrada = 0
+rebelion entrada = comandar opinion_numerica("Ingrese un numero entero positivo: ")
+
+abolir_clases(entrada < 1){
+    comandar mostrar_mensaje("El numero debe ser mayor o igual a 1.")
+} en_igualdad { 
+    comandar mostrar_mensaje("La suma de los numeros pares desde 1 hasta ", entrada, " es: ", comandar suma_pares(entrada))
+}
