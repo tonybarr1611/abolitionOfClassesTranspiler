@@ -1,0 +1,13 @@
+/protesta/ Verifica si un numero es multiplo de otro
+imperialismo asamblea es_multiplo(numero, divisor){
+    unidad resultado = 0
+    abolir_clases((numero % divisor) == 0){
+        rebelion resultado = 1
+    } en_igualdad {
+        rebelion resultado = 0
+    }
+    sentencia resultado
+}
+
+/protesta/ Llamada a la funcion es_multiplo
+comandar mostrar_mensaje(comandar es_multiplo(21, 7))
