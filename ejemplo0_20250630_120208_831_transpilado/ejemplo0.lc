@@ -1,0 +1,135 @@
+/protesta/ Carrera de Babosas - Simulador de competencia
+asamblea validar_velocidad(velocidad){
+    unidad es_valida = 0
+    abolir_clases(velocidad <= 50){
+        rebelion es_valida = 1
+    } en_igualdad {
+        rebelion es_valida = 0
+    }
+    sentencia es_valida
+}
+
+asamblea obtener_velocidad_babosa(numero_babosa){
+    unidad velocidad = 0
+    unidad velocidad_valida = 0
+    revolucion(velocidad_valida == 0){
+        comandar mostrar_mensaje("Ingrese la velocidad de la babosa ", numero_babosa, " (1-50): ")
+        rebelion velocidad = comandar opinion_numerica("")
+
+        abolir_clases(comandar validar_velocidad(velocidad) == 1){
+            rebelion velocidad_valida = 1
+        } en_igualdad {
+            comandar mostrar_mensaje("Error: La velocidad debe estar entre 1 y 50. Intente nuevamente.")
+        }
+    }
+    sentencia velocidad
+}
+
+/protesta/ Funcion para determinar el ganador
+asamblea determinar_ganador(distancia1, distancia2, distancia3){
+    unidad ganador = 1
+    abolir_clases(distancia2 > distancia1){
+        rebelion ganador = 2
+    }
+    abolir_clases(distancia3 > distancia1){
+        abolir_clases(distancia3 > distancia2){
+            rebelion ganador = 3
+        }
+    }
+    sentencia ganador
+}
+
+/protesta/ Funcion para determinar si ha terminado la carrera
+asamblea ha_finalizado(distancia1, distancia2, distancia3){
+    unidad ha_terminado = 0
+    abolir_clases(distancia1 >= 300){
+        rebelion ha_terminado = 1
+    }
+    abolir_clases(distancia2 >= 300){
+        rebelion ha_terminado = 1
+    }
+    abolir_clases(distancia3 >= 300){
+        rebelion ha_terminado = 1
+    }
+    sentencia ha_terminado
+}
+
+/protesta/ Funcion para determinar si ha terminado la carrera
+asamblea obtener_distancia_guiones(distancia){
+    manifiesto guiones = ""
+    revolucion (distancia > 0){
+        rebelion guiones = guiones + "-"
+        rebelion distancia = distancia - 10
+    }
+    sentencia guiones
+}
+
+/protesta/ Funcion principal de la carrera
+asamblea iniciar_carrera(){
+    comandar mostrar_mensaje("=== CARRERA DE BABOSAS ===")
+    comandar mostrar_mensaje("Bienvenido a la gran carrera revolucionaria de babosas!")
+    comandar mostrar_mensaje("")
+
+    /protesta/ Obtener velocidades de las 3 babosas
+    unidad velocidad_babosa1 = 0
+    unidad velocidad_babosa2 = 0
+    unidad velocidad_babosa3 = 0
+
+    rebelion velocidad_babosa1 = comandar obtener_velocidad_babosa(1)
+    rebelion velocidad_babosa2 = comandar obtener_velocidad_babosa(2)
+    rebelion velocidad_babosa3 = comandar obtener_velocidad_babosa(3)
+
+    comandar mostrar_mensaje("")
+    comandar mostrar_mensaje("=== CONFIGURACION DE LA CARRERA ===")
+    comandar mostrar_mensaje("Babosa 1 - Velocidad: ", velocidad_babosa1)
+    comandar mostrar_mensaje("Babosa 2 - Velocidad: ", velocidad_babosa2)
+    comandar mostrar_mensaje("Babosa 3 - Velocidad: ", velocidad_babosa3)
+    comandar mostrar_mensaje("")
+
+    /protesta/ Simular la carrera durante 10 segundos
+    unidad tiempo_carrera = 10
+    comandar mostrar_mensaje("¡La carrera comienza! Duracion: ", tiempo_carrera, " segundos")
+    comandar mostrar_mensaje("")
+
+    /protesta/ Simulacion
+    imperialismo unidad distancia_babosa1 = 0
+    imperialismo unidad distancia_babosa2 = 0
+    imperialismo unidad distancia_babosa3 = 0
+    imperialismo unidad tiempo_transcurrido = 0
+
+    revolucion (comandar ha_finalizado(distancia_babosa1, distancia_babosa2, distancia_babosa3) == 0){
+        rebelion distancia_babosa1 = distancia_babosa1 + (velocidad_babosa1 / 2)
+        rebelion distancia_babosa2 = distancia_babosa2 + (velocidad_babosa2 / 2)
+        rebelion distancia_babosa3 = distancia_babosa3 + (velocidad_babosa3 / 2)
+        rebelion tiempo_transcurrido = tiempo_transcurrido + 1
+
+        comandar expropiar()
+
+        comandar mostrar_mensaje("=== ESTADO DE LA CARRERA ===")
+        comandar mostrar_mensaje("Tiempo transcurrido: ", tiempo_transcurrido, " segundos")
+        comandar mostrar_mensaje("Babosa 1 => ", comandar obtener_distancia_guiones(distancia_babosa1))
+        comandar mostrar_mensaje("Babosa 2 => ", comandar obtener_distancia_guiones(distancia_babosa2))
+        comandar mostrar_mensaje("Babosa 3 => ", comandar obtener_distancia_guiones(distancia_babosa3))
+        comandar mostrar_mensaje("")
+
+        comandar dormir(1)
+    }
+
+    /protesta/ Determinar y anunciar el ganador
+    unidad babosa_ganadora = 0
+    comandar expropiar()
+    rebelion babosa_ganadora = comandar determinar_ganador(distancia_babosa1, distancia_babosa2, distancia_babosa3)
+    comandar mostrar_mensaje("LA BABOSA ", babosa_ganadora, " HA GANADO LA CARRERA !!!")
+
+    /protesta/ Mostrar mensaje final
+    comandar mostrar_mensaje("")
+    comandar mostrar_mensaje("La babosa 1 ha recorrido: ", comandar obtener_distancia_guiones(distancia_babosa1))
+    comandar mostrar_mensaje("La babosa 2 ha recorrido: ", comandar obtener_distancia_guiones(distancia_babosa2))
+    comandar mostrar_mensaje("La babosa 3 ha recorrido: ", comandar obtener_distancia_guiones(distancia_babosa3))
+
+    sentencia babosa_ganadora
+}
+
+/protesta/ Ejecutar la carrera
+comandar mostrar_mensaje("Iniciando simulador de carrera...")
+comandar iniciar_carrera()
