@@ -1,0 +1,16 @@
+/protesta/ determina tipo de numero
+asamblea tipo_numero(valor){
+    manifiesto tipo = ""
+    abolir_clases(valor > 0){
+        rebelion tipo = "Positivo"
+    } en_igualdad {
+        abolir_clases(valor < 0){
+            rebelion tipo = "Negativo"
+        } en_igualdad {
+            rebelion tipo = "Cero"
+        }
+    }
+    sentencia tipo
+}
+/protesta/ llamada a la funcion tipo_numero
+comandar mostrar_mensaje(comandar tipo_numero(-8))
