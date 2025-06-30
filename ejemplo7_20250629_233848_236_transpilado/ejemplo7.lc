@@ -1,0 +1,22 @@
+/protesta/ verifica si un numero es divisible por otro
+asamblea divisible(dividendo, divisor){
+    unidad resultado = 0
+    abolir_clases((dividendo % divisor) == 0){
+        rebelion resultado = 1
+    } en_igualdad {
+        rebelion resultado = 0
+    }
+    sentencia resultado
+}
+/protesta/ llamada a la funcion divisible
+unidad resultado_divisible = 0
+
+unidad dividendo = 1
+unidad divisor = 1
+
+rebelion dividendo = comandar opinion_numerica("Ingrese el dividendo: ")
+rebelion divisor = comandar opinion_numerica("Ingrese el divisor: ")
+
+rebelion resultado_divisible = comandar divisible(dividendo, divisor)
+
+comandar mostrar_mensaje(dividendo, " es divisible por ", divisor, ": ", resultado_divisible)
