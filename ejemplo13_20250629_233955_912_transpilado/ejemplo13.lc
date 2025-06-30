@@ -1,0 +1,12 @@
+/protesta/ Valor absoluto de un entero
+comunidad asamblea absoluto(valor){
+    unidad resultado = 0
+    abolir_clases(valor < 0){
+        rebelion resultado = 0 - valor
+    } en_igualdad {
+        rebelion resultado = valor
+    }
+    sentencia resultado
+}
+
+comandar mostrar_mensaje(comandar absoluto(-12))
