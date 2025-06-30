@@ -1,0 +1,23 @@
+asamblea numero_palindromo(numero){
+    comunidad unidad original = 0
+    rebelion original = numero
+    comunidad unidad invertido = 0
+    comunidad unidad resultado = 0
+
+    revolucion (numero > 0){
+        comunidad unidad digito = 0
+        rebelion digito = numero % 10
+        rebelion invertido = (invertido * 10) + digito
+        rebelion numero = numero // 10
+    }
+    abolir_clases(invertido == original){
+         rebelion resultado = 1 /protesta/ Verdadero, es palindromo
+    }en_igualdad{
+         rebelion resultado = 0 /protesta/ Falso, no es palindromo
+    }
+    comandar mostrar_mensaje("El numero es un palindromo: ", resultado)
+    sentencia resultado
+}
+/protesta/ Uso de la funcion
+comandar numero_palindromo(12321) /protesta/ retorna 1 (Verdadero)
+comandar numero_palindromo(12345) /protesta/ retorna 0 (Falso)
