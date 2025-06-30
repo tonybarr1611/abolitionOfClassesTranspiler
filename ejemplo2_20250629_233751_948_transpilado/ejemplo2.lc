@@ -1,0 +1,12 @@
+asamblea potencia (base, exponente){
+    comunidad unidad resultado = 1
+    comunidad unidad contador = 0
+
+    revolucion (contador < exponente){
+        rebelion resultado = resultado * base
+        rebelion contador = contador + 1
+    }
+    sentencia resultado
+}
+/protesta/ Uso de la funcion
+comandar mostrar_mensaje(comandar potencia(2, 5))
