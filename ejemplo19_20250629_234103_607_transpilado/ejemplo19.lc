@@ -1,0 +1,16 @@
+/protesta/ Calcula la diferencia absoluta entre dos números
+
+comunidad unidad resultado = 0
+
+asamblea diferencia_absoluta(a, b){
+    unidad resultado = 0
+    rebelion resultado = a - b
+    abolir_clases(resultado < 0){
+        rebelion resultado = resultado * -1
+    }
+    sentencia resultado
+}
+
+/protesta/ Llamada a la función diferencia_absoluta
+comandar mostrar_mensaje("Resultado de la funcion: ", comandar diferencia_absoluta(5, 12))
+comandar mostrar_mensaje("Resultado fuera de la funcion: ", resultado)
