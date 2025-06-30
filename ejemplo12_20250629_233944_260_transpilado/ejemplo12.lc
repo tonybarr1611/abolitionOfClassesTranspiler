@@ -1,0 +1,12 @@
+/protesta/ Determina si un numero es impar
+asamblea es_impar(valor){
+    unidad resultado = 0
+    abolir_clases((valor % 2) != 0){
+        rebelion resultado = 1
+    } en_igualdad {
+        rebelion resultado = 0
+    }
+    sentencia resultado
+}
+
+comandar mostrar_mensaje(comandar es_impar(9))
