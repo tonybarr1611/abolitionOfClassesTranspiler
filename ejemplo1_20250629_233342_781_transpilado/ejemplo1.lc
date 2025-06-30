@@ -1,0 +1,17 @@
+/protesta/ Definir funcion recursiva para calcular el factorial de un numero
+comunidad asamblea factorial(n){
+    unidad resultado = 0
+    abolir_clases(n==0){
+        rebelion resultado = 1
+    } en_igualdad {
+        unidad factorial_n_menos_1 = 0
+        rebelion factorial_n_menos_1 = comandar factorial((n - 1))
+        rebelion resultado = n * factorial_n_menos_1
+    }
+    sentencia resultado
+}
+
+/protesta/ Llamar a la funcion con un numero especifico
+unidad resultado = 0
+rebelion resultado = comandar factorial(5)
+comandar mostrar_mensaje("El factorial de 5 es: ", resultado)
