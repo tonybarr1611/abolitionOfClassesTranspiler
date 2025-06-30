@@ -1,0 +1,13 @@
+/protesta/ Retorna el residuo de la división entre dos enteros
+
+comunidad unidad resultado = 0
+
+comunidad asamblea residuo(dividendo, divisor){
+    comunidad unidad resultado = 0
+    rebelion resultado = dividendo % divisor
+    sentencia resultado
+}
+
+/protesta/ Llamada a la función residuo
+comandar mostrar_mensaje("Resultado dentro de la funcion: ", comandar residuo(17, 5))
+comandar mostrar_mensaje("Resultado fuera de la funcion: ", resultado)
