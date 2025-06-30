@@ -1,0 +1,17 @@
+/protesta/ Calcula el máximo de tres números
+
+imperialismo unidad resultado = 0
+
+asamblea maximo_tres(a, b, c){
+    rebelion resultado = a
+    abolir_clases(b > resultado){
+        rebelion resultado = b
+    }
+    abolir_clases(c > resultado){
+        rebelion resultado = c
+    }
+    sentencia resultado
+}
+
+/protesta/ Uso de la función maximo_tres
+comandar mostrar_mensaje(comandar maximo_tres(2, 8, 5))
